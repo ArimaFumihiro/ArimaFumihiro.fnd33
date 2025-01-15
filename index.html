@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>4s-board</title>
+</head>
+<body>
+  <!--　Header始まり　-->
+  <header class="flex">
+    <h1 class="main-title">4Sボード</h1>
+    <label for="file">OPEN FILE</label>
+    <input type="file" name="file" id="open-file">
+  </header>
+  <!--　Header終わり　-->
+
+  <!--　contents始まり　--> 
+  <div class="contents">
+    <!--　monitor-left始まり　--> 
+    <div id="monitor-left">
+      <!--　職場４Ｓ＋躾始まり　-->   
+      <div id="what-is-4s">
+        <h2 class="box-headline">【職場４Ｓ＋躾（Ｓ）とは】</h2>
+        <div class="what-is-4s-contents">      
+          <h3 class="content-title">4S活動のあるべき姿</h3>
+          <p class="padding-left05">４Ｓ活動は常に全員で問題発見に努め
+              『ムダ、ムラ、ムリ』の無い<br>
+              効率的な職場環境を構築する事が望まれる
+          </p>          
+        </div>
+        <div class="what-is-4s-contents">      
+          <h3 class="content-title">4S+躾(S)活動の定義 </h3>
+          <ul class="points">
+            <li class="points-item">＊整理 ・・・ 必要な物と不必要な物を区別し不要なものは処分する</li>
+            <li class="points-item">＊整頓 ・・・ 必要な物を使い易いように名称、場所を決め、整える</li>  
+            <li class="points-item">＊清掃 ・・・ 汚れを掃除する事、異常な汚れに対し、対策を打ち、<br>　　　　　　 正常に戻す</li>         
+            <li class="points-item">＊清潔 ・・・ 人の面は作業衣、保護具等の汚れ、乱れを清潔にし、<br>　　　　　　 場の面は整理、整頓、清掃の状態を維持する</li>               
+            <li class="points-item">＊躾　 ・・・  安全ﾙｰﾙの遵守、4Sを率先垂範で実践出来る人の育成と、<br>　　　　　　 相互啓発型の職場づくりを徹底する</li>    
+          </ul>            
+        </div>
+        <div class="what-is-4s-contents">      
+          <h3 class="content-title-left">★_工夫とは、しくみの見直し、改善（人・物）</h3>
+          <h4 class="sub-title">(シルバー)工夫がされているとは…　(現地確認可)</h4>           
+          <p class="padding-left15">(整理・整頓)　在庫品低減に繋がる工夫がある</p>
+          <p class="padding-left15">(清掃・清潔)　４S工数低減に繋がる工夫がある</p>
+          <h4 class="sub-title">(ゴールド)工夫の成果が出ているとは・・・</h4>           
+          <p class="padding-left15">・成果が数値、もしくは、現地で確認出来る事</p>
+          <h4 class="sub-title">★整然とは、秩序正しく整っている</h4>    
+        </div>      
+      </div>
+      <!--　職場４Ｓ＋躾終わり　-->
+    
+      <!--　要件の始まり　-->
+      <div class="wrapper">
+        <div class="wrap-column1-5 wrap-row1-3-1 top">
+          <h2 class="box-headline">維持継続確認状況</h2>
+        </div>
+        <div class="box heading wrap-column1 wrap-row1-2">
+          <h4 class="vertical">凡例</h4>
+        </div>        
+        <div class="box wrap-column1-3 wrap-row1-3-3">
+          <h3 class="content-title">点検箇所</h3>
+        </div>
+        <div class="box heading wrap-column1 wrap-row1-4">
+          <h4 class="vertical">職場周辺</h3>
+        </div>
+        <div class="box heading wrap-column1 wrap-row1-5">
+          <h4 class="vertical">物品置場周辺</h3>
+        </div>
+        <div class="box heading wrap-column1 wrap-row1-6">
+          <h4 class="vertical">ライン内・保全作業場</h3>
+        </div>
+        <div class="box heading wrap-column1 wrap-row1-7">
+          <h4 class="vertical">休憩所</h3>
+        </div>
+        <div class="box heading wrap-column1 wrap-row1-8">
+          <h4 class="vertical">組長机</h3>
+        </div>
+        <div class="box heading wrap-column1 wrap-row1-9">
+          <h4 class="vertical">資料置場</h3>
+        </div>
+        <div class="box heading wrap-column1 wrap-row1-10">
+          <h4 class="vertical">躾１</h3>
+        </div>
+        <div class="box heading wrap-column1 wrap-row1-11">
+          <h4 class="vertical">躾２</h3>
+        </div>    
+        <div class="box wrap-column2-3 wrap-row2-2">
+          <ul class="points">
+            <li>無印・・・共通</li>
+            <li>★・・・製造</li>
+            <li>▲・・・保全</li>
+          </ul>
+        </div>   
+        <div class="box wrap-column2 wrap-row2-4">
+          区画線<br>歩行帯/通路
+        </div>
+        <div class="box wrap-column2 wrap-row2-5">
+          油脂置場<br>（職場ニーズで対応）<br>・少量危険物庫
+        </div>
+        <div class="box wrap-column2 wrap-row2-6">
+          ★部品棚（部品シュート）<br>★生産品在庫<br>▲仕掛品置場
+        </div>
+        <div class="box wrap-column2 wrap-row2-7">
+          予備品棚<br>副資材（手袋、ｳｴｽ等）<br>▲資材置場
+        </div>
+        <div class="box wrap-column2 wrap-row2-8">
+          作業場<br>作業台<br>★(手直し、ﾁｪｯｸ台)<br>▲（ﾊﾞｲｽ台）
+        </div>
+        <div class="box wrap-column2 wrap-row2-9"> 
+          ★生産設備<br>▲保全用設備<br>（職場ニーズで対応）     
+        </div>
+        <div class="box wrap-column2 wrap-row2-10">
+          ★ﾏｽﾀｰﾜｰｸ置場<br>★各治工具類置場<br>▲道具工具（工具台車等）     
+        </div>
+        <div class="box wrap-column2 wrap-row2-11">
+          掲示物<br>チェックシート<br>要領書・手順書等          
+        </div>
+        <div class="box wrap-column2 wrap-row2-12">私物<br>
+          掲示物<br>
+          備品
+        </div>
+        <div class="box wrap-column2 wrap-row2-13"> 掲示物<br>
+          キャビネット<br>
+          机上周辺
+        </div>
+        <div class="box wrap-column2 wrap-row2-14"> 休憩所周辺<br>
+          ★ライン内<br>
+          ▲保全詰所内
+        </div>
+        <div class="box wrap-column2 wrap-row2-15"> 【メンバー】<br>
+          ・活動への参画
+        </div>
+        <div class="box wrap-column2 wrap-row2-16"> 【管理・監督者】<br>
+          ・活動の活性化
+        </div>
+        
+        <!--　タブ始まり　-->
+        <div class="tab-nav box wrap-column3 wrap-row3-2">
+          <a href="" class="tab-nav-item is-active" data-nav="0">ブロンズ</a>
+          <a href="" class="tab-nav-item" data-nav="1">シルバー</a>
+          <a href="" class="tab-nav-item" data-nav="2">ゴールド</a>
+        </div>
+        <!--　タブ終わり　-->
+        
+        <!--　ブロンズ始まり　-->   
+        <div class="item0 box wrap-column3 wrap-row3-3">
+          <h4 class="sub-title">しくみがあり、活動している　(評価点3)</h4>
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-4 top">
+          <p>・物の置場に表示や区画線がある</p>
+          <p>・通路上にゴミ、油が落ちていない</p>      
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-5">
+          <p>・使途不明な物品は無い</p>
+          <p>・計画的に、清掃されている</p>      
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-6">
+          <p>・良品と不良品が混在していない</p>
+          <p>・計画的に、清掃されている</p>   
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-7">
+          <p>・使途不明な物品は無い</p>
+          <p>・計画的に、清掃されている</p>   
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-8">
+          <p>・使途不明な物品は無い</p>
+          <p>・計画的に、清掃されている</p>   
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-9">
+          <p>・設備のカバー、ボルトの外れがない</p>
+          <p>・計画的に、清掃されている</p>   
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-10">
+          <p>・不要品は置いて無い</p>
+          <p>・計画的に、清掃されている</p>   
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-11">
+          <p>・掲示場所が明確である</p>
+          <p>・計画的に、清掃されている</p>   
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-12">
+          <p>・私物、不要物が放置されていない</p>
+          <p>・計画的に、清掃されている</p>   
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-13">
+          <p>・管理資料が整理されている</p>
+          <p>・計画的に、清掃されている</p>   
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-14">
+          <p>・書類等が整理されている</p>
+          <p>・計画的に、清掃されている</p>   
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-15">
+          <p>・４Ｓの定義を理解している</p>   
+        </div>
+        <div class="item0 box wrap-column3 wrap-row3-16">
+          <p>・４Ｓ活動を計画的に行うしくみがある</p>   
+        </div>
+        <!--　ブロンズ終わり　-->          
+        
+        <!--　シルバー始まり　-->
+        <div class="item1 box wrap-column3 wrap-row3-3">
+          <h4 class="sub-title">工夫されている　　　　　　　(評価点4)</h4>
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-4 top">
+          <p>・通路、区画線が修正されている</p>
+          <p>・通路、区画線の汚れ、剥がれない工夫が有る</p>      
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-5">
+          <p>・量を減らす工夫をしている</p>
+          <p>・床面が汚れない工夫がある</p>      
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-6">
+          <p>・先入れ、先出しが出来ている</p>
+          <p>・物品が汚れない工夫がある</p>   
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-7">
+          <p>・量を減らす工夫をしている</p>
+          <p>・物品が汚れない工夫がある</p>   
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-8">
+          <p>・物品の置場が明確になっている</p>
+          <p>・作業場等が汚れない工夫がある</p>   
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-9">
+          <p>・備品類が放置されていない</p>
+          <p>・設備等に汚れない工夫がある</p>   
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-10">
+          <p>・定期的に点検され、管理されている</p>
+          <p>・物品が汚れない工夫が有る</p>   
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-11">
+          <p>・掲示物、責任者が明確である</p>
+          <p>・掲示物が汚れない工夫が有る</p>   
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-12">
+          <p>・物の置場に明示がある</p>
+          <p>・汚れない工夫が有る</p>   
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-13">
+          <p>・書類置場が明確である</p>
+          <p>・机上、その周辺に汚れがない</p>   
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-14">
+          <p>・書類等の置場が明確である</p>
+          <p>・棚が汚れない工夫がある</p>   
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-15">
+          <p>・４Ｓの改善提案が出来る</p>   
+        </div>
+        <div class="item1 box wrap-column3 wrap-row3-16">
+          <p>・４Ｓ活動の課題を定期的にフォローしている</p>   
+        </div>
+        <!--　シルバー終わり　-->        
+      
+        <!--　ゴールド始まり　-->
+        <div class="item2 box wrap-column3 wrap-row3-3">
+          <h4 class="sub-title">工夫の成果が出ている　　　　(評価点5)</h4>
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-4 top">
+          <p class="margin-bottom5">・通路、区画線が整備され、安全性が確保されている</p>
+          <p>・歩行帯、区画線の不具合が無く、維持している</p>      
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-5">
+          <p class="margin-bottom5">・適正な在庫量を保有している</p>
+          <p>・工夫した成果が出ている</p>      
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-6">
+          <p class="margin-bottom5">・必要な在庫量が管理されている</p>
+          <p>・工夫した成果が出ている</p>   
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-7">
+          <p class="margin-bottom5">・適正な在庫量を保有している</p>
+          <p>・工夫した成果が出ている</p>   
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-8">
+          <p class="margin-bottom5">・必要な物だけが整備されている</p>
+          <p>・工夫した成果が出ている</p>   
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-9">
+          <p class="margin-bottom5">・設備周辺に不要品が全く無い</p>
+          <p>・工夫した成果が出ている</p>   
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-10">
+          <p class="margin-bottom5">・良い状態の工具類が整備されている</p>
+          <p>・工夫した成果が出ている</p>   
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-11">
+          <p class="margin-bottom5">・掲示物の管理が維持出来ている</p>
+          <p>・工夫した成果が出ている</p>   
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-12">
+          <p class="margin-bottom5">・必要な物だけが整然と置いてある</p>
+          <p>・清潔で維持できている</p>   
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-13">
+          <p class="margin-bottom5">・必要な物だけが整然と置いてある</p>
+          <p>・清潔で維持できている</p>   
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-14">
+          <p class="margin-bottom5">・必要な管理資料が整然と置いてある</p>
+          <p>・物品に汚れなく、維持している</p>   
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-15">
+          <p>・改善事例を共有し、互いのレベルアップに繋げている</p>   
+        </div>
+        <div class="item2 box wrap-column3 wrap-row3-16">
+          <p>・４Ｓ活動のあるべき姿に取組んでいる</p>   
+        </div>
+        <!--　ゴールド終わり　-->  
+      </div>
+      <!--　要件の終わり　-->
+    
+    </div>
+    <!--　monitor-left終わり　-->
+
+    <!--　monitor-iframe始まり　-->
+    <div class="monitor-iframe">
+      <h2 class="table-headline">【4S計画・実施記録シート】</h2> 
+      <div class="iframe-contents">
+        <div class="iframe-contents-items">
+          <iframe class="iframe" width="1480px" height="900px" frameborder="0" src="https://toyotajp.sharepoint.com/sites/msteams_5391af/_layouts/15/Doc.aspx?sourcedoc={f57ae177-75a6-46de-b4c1-23b9103099fc}&action=embedview&wdAllowInteractivity=False&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>
+        </div>
+      </div>
+      <a class="QR" href="./QR-sample/QRsample.html" target="_blank" rel="noopener noreferrer"><img class="QR" src="./QR-sample/QR_Sample.jpg" width="30" alt="QRコードサンプル"></a>
+      
+      
+      <h2 class="table-headline">【4S気づき困りごと　計画/対策シート】</h2>          
+      <div class="iframe-contents">
+        <div class="iframe-contents-items">                
+          <iframe class="iframe" width="1480px" height="900px" frameborder="0" src="https://toyotajp.sharepoint.com/sites/msteams_5391af/_layouts/15/Doc.aspx?sourcedoc={fd9102d4-2226-4870-b4ce-d72919cd1a14}&action=embedview&wdAllowInteractivity=False&Item=%E8%A8%88%E7%94%BB%E5%AF%BE%E7%AD%96!Print_Area&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>                               
+        </div>
+      </div>
+      <a class="QR" href="./QR-sample/QRsample.html" target="_blank" rel="noopener noreferrer"><img class="QR" src="./QR-sample/QR_Sample.jpg" width="30" alt="QRコードサンプル"></a>
+
+      <h2 class="table-headline">【4S気づき困りごと　計画/対策シート】</h2>          
+      <div class="iframe-contents">
+        <div class="iframe-contents-items">                
+          <iframe class="iframe" width="1480px" height="900px" frameborder="0" src="https://toyotajp.sharepoint.com/sites/msteams_5391af/_layouts/15/Doc.aspx?sourcedoc={fd9102d4-2226-4870-b4ce-d72919cd1a14}&action=embedview&wdAllowInteractivity=False&Item=%E8%A8%88%E7%94%BB%E5%AF%BE%E7%AD%96!Print_Area&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True"></iframe>                               
+        </div>
+      </div>
+      <a class="QR" href="./QR-sample/QRsample.html" target="_blank" rel="noopener noreferrer"><img class="QR" src="./QR-sample/QR_Sample.jpg" width="30" alt="QRコードサンプル"></a>      
+    </div>
+    <!--　monitor-iframe終わり　-->
+    <!--　monitor-menber始まり　-->
+    <div class="monitor-menber">
+      <div class="leadar-content">
+        <h2>【リーダー】</h2>
+        ・計画表で４S箇所を確認し４Sマップへメンバーの名札を貼り付け<br>
+          　指示カード待機場へカードを置く<br>
+          ・４S終了後 指示カードを持ち 各箇所が指示通りか確認する<br>
+          　確認後 指示カード 名札は元の所へ戻す                  
+      </div>  
+      <div class="menber-content">
+        <div class="content">
+          <h2>【メンバー】</h2>
+          ・計画表で４S箇所を確認し４Sマップへメンバーの名札を貼り付け<br>
+          　指示カード待機場へカードを置く<br>
+          ・４S終了後 指示カードを持ち 各箇所が指示通りか確認する<br>
+          　確認後 指示カード 名札は元の所へ戻す
+        </div>      
+      </div>
+      <div class="leadar-content">
+        <div class="content">
+          <h2>【本日の４Ｓリーダー】</h2>
+          <p id="today-leadar">arima</p>   
+        </div>
+      </div>
+      <div class="menber-content">
+        <div class="content">
+          <h2>【メンバー】</h2>
+        </div>
+      </div>
+     
+      <table id="menbers-schedule">
+        <tbody>
+          <tr>
+            <th>名前</th><th>カードNo.</th><th>実施状況</th><th>気づき</th>
+          </tr>
+          <tr>
+            <td id="menber1">A</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td id="menber2">B</td>
+          </tr>
+          <tr>
+            <td id="menber3">C</td>
+          </tr>
+          <tr>
+            <td id="menber4">D</td>
+          </tr>
+          <tr>
+            <td id="menber5">E</td>
+          </tr>
+          <tr>
+            <td id="menber6">F</td>
+          </tr>
+          <tr>
+            <td id="menber7">G</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>
+          <tr>
+            <td id="menber8">H</td>
+          </tr>         
+          
+        </tbody>
+      </table>
+      <div id="carry-over">
+        繰り越し
+      </div>
+    </div>
+    <!--　monitor-menber終わり　-->
+  </div>
+  <!--　contents終わり　-->
+
+
+
+
+
+
+
+  
+  
+  
+ 
+
+
+
+
+
+
+  <footer>©2025 Fumihiro Arima</footer>
+  <script src="./script.js"></script>
+</body>
+</html>
