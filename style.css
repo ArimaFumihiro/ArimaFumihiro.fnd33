@@ -35,8 +35,8 @@ header {
   border-bottom: 3px solid #A1A1A6;
 }
 
-.main-title {
-  width: 92%;
+#main-title {
+  width: 88%;
   text-align: center;
   font-size: 5vh;
   font-weight: bold;
@@ -44,20 +44,27 @@ header {
   padding: 5px 0 0;
 }
 
-header label {
-  width: 1.8%;
-  font-size: 0.8vh;
-  text-align: center;
+.content-file {
+  justify-items: end;
 }
 
-header input {
+.open-file-items {
+  display: flex;
+  width: 12%;
+}
+
+.file-label{
   font-size: 0.8vh;
-  width: 6%
+}
+
+.open-file{
+  width: 90px;
+  font-size: 0.8vh;
 }
 
 .content-title {
   text-align: center;
-  font-size: 10px;
+  font-size: 5px;
   margin: 0;
   padding: 3px 0;
 }
@@ -434,6 +441,7 @@ header input {
 
 /*monitor-menber*/
 .monitor-menber {
+  width: 275px;
   justify-items: center;
   padding: 0;
   margin: 6px 0 0 10px;
@@ -441,7 +449,7 @@ header input {
 
 .leadar-content,
 .menber-content {
-  width: 260px;
+  width: 270px;
   border-radius: 5px;
   background-color: #00010D;
   color: #F8FBFD;
@@ -467,10 +475,19 @@ header input {
   padding: 2px;
 }
 
-#menbers-schedule {
+#menbars-table {
   margin: 0;
   padding: 0;
-  width: 265px;
+  width: 270px;
+  max-height: 511px;
+  overflow: auto;
+}
+
+#menbers-schedule {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  width: 270px;
   text-align: center;
   border: 1px solid #00010D;
   background-color: #F8FBFD;
@@ -478,26 +495,38 @@ header input {
 }
 
 #menbers-schedule th {
+  margin: 0;
+  padding: 0;
   color: #fff;
   background-color: #565659;
   border: 1px solid #00010D;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 #menbers-schedule td {
+  margin: 0;
+  padding: 0;
   border: 1px solid #00010D;
-  font-size: 13px;
+  font-size: 18px;
 }
 
+.table-button {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: auto;
+  align-items: center;
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+}
 #carry-over {
   margin: 10px 0 0;
-  padding: 0;
+  padding: 1px;
   width: 265px;
   height: 53px;
   border: 1px solid #00010D;
 }
-
-
 
 footer {
   text-align: end;
