@@ -510,16 +510,7 @@ header {
   font-size: 18px;
 }
 
-.table-button {
-  display: flex;
-  align-items: center;
-  margin: auto;
-  padding: auto;
-  align-items: center;
-  width: 40px;
-  height: 20px;
-  border-radius: 5px;
-}
+
 #carry-over {
   margin: 10px 0 0;
   padding: 1px;
@@ -527,6 +518,20 @@ header {
   height: 53px;
   border: 1px solid #00010D;
 }
+
+.monitor-map {
+  margin: 5px 0 0 20px;
+  padding: 0;
+}
+
+#mein-map {
+  border: 1px solid #00010D;
+  width: 800px;
+  height: 500px;
+}
+
+
+
 
 footer {
   text-align: end;
