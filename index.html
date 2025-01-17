@@ -12,13 +12,13 @@
     <h1 id="main-title">4Sボード</h1>
     <div class="content-file">
       <div class="open-file-itmens">
-        <label class="file-label" for="menber-file">MENBAR FILE</label>
-        <input class="open-file" type="file" name="file" id="menber-file">
-      </div>
-      <div class="open-file-itmens">
         <label class="file-label" for="link-file">LINK FILE</label>
         <input class="open-file" type="file" name="file" id="link-file">
       </div>        
+      <div class="open-file-itmens">
+        <label class="file-label" for="menber-file">MENBER FILE</label>
+        <input class="open-file" type="file" name="file" id="menber-file">
+      </div>
     </div>
   </header>
   <!--　Header終わり　-->
@@ -374,7 +374,7 @@
       <div class="leadar-content">
         <div class="content">
           <h2>【本日の４Ｓリーダー】</h2>
-          <p id="today-leadar">arima</p>   
+          <p id="today-leadar"></p>   
         </div>
       </div>
       <div class="menber-content">
@@ -382,7 +382,7 @@
           <h2>【メンバー】</h2>
         </div>
       </div>
-      <div id="menbars-table">
+      <div id="menbers-table">
         <table id="menbers-schedule">        
         </table>
       </div>
@@ -395,67 +395,27 @@
     <div class="monitor-map">
       <div id="content-map">
         <div id="mapping">
-          <table>
-            <tbody>
-              <tr>
-                <td class="square">1</td><td class="square">2</td><td class="square">3</td><td class="square">4</td><td class="square">5</td>
-                <td class="square">6</td><td class="square">7</td><td class="square">8</td><td class="square">9</td><td class="square">10</td>
-                <td class="square">11</td><td class="square">12</td><td class="square">13</td><td class="square">14</td><td class="square">15</td>
-                <td class="square">16</td><td class="square">17</td><td class="square">18</td>
-              </tr>
-              <tr>
-                <td class="square">19</td><td class="square">20</td><td class="square">21</td><td class="square">22</td><td class="square">23</td>
-                <td class="square">24</td><td class="square">25</td><td class="square">26</td><td class="square">27</td><td class="square">28</td>
-                <td class="square">29</td><td class="square">30</td><td class="square">31</td><td class="square">32</td><td class="square">33</td>
-                <td class="square">34</td><td class="square">35</td><td class="square">36</td>
-              </tr>
-              <tr>
-                <td class="square">37</td><td class="square"></td>38<td class="square">39</td><td class="square">40</td><td class="square">41</td>
-                <td class="square">42</td><td class="square"></td>43<td class="square">44</td><td class="square">45</td><td class="square">46</td>
-                <td class="square">47</td><td class="square"></td>48<td class="square">49</td><td class="square">50</td><td class="square">51</td>
-                <td class="square">52</td><td class="square"></td>53<td class="square">54</td>
-              </tr>
-              <tr>
-                <td class="square">55</td><td class="square">56</td><td class="square">57</td><td class="square">58</td><td class="square">59</td>
-                <td class="square">60</td><td class="square">61</td><td class="square">62</td><td class="square">63</td><td class="square">64</td>
-                <td class="square">65</td><td class="square">66</td><td class="square">67</td><td class="square">68</td><td class="square">69</td>
-                <td class="square">70</td><td class="square">71</td><td class="square">72</td>
-              </tr>
-              <tr>
-                <td class="square">73</td><td class="square">74</td><td class="square">75</td><td class="square">76</td><td class="square">77</td>
-                <td class="square">78</td><td class="square">79</td><td class="square">80</td><td class="square">81</td><td class="square">82</td>
-                <td class="square">83</td><td class="square">84</td><td class="square">85</td><td class="square">86</td><td class="square">87</td>
-                <td class="square">88</td><td class="square">89</td><td class="square">90</td>
-              </tr>
-              <tr>
-                <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
-                <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
-                <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
-                <td class="square"></td><td class="square"></td><td class="square"></td>
-              </tr>
-              <tr>
-                <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
-              </tr>
-              <tr>
-                <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
-              </tr>
-              <tr>
-                <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
-              </tr>
-              <tr>
-                <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
-              </tr>
-              <tr>
-                <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
-              </tr>
-            </tbody>
-          </table>
+          <table id="map-table"><tbody id="table-body"></tbody></table>
         </div>
+      </div>
+      <div id="serect">
+        <div>◀</div>
+        <div>⬛</div>
+        <div>▶</div>
       </div>
     </div>
     <!--　monitor-map終わり　-->
+    <!--　monitor-right始まり　-->
+    <div class="monitor-right">
+      <div class="button">
+        <label for="map-button">MAP配置を表示</label>
+        <input id="map-button" type="checkbox" value="MAP配置">
+      </div>
+    </div>
+    <!--　monitor-right終わり　-->
   </div>
   <!--　contents終わり　-->
   <footer>©2025</footer>
+  <script type="text/javascript" src="./table.js"></script>
   <script type="text/javascript" src="./script.js"></script>
 </html>
