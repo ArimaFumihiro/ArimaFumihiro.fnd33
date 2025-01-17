@@ -1,3 +1,5 @@
+'use strict'
+
 const tbody = document.getElementById("table-body")
 const column = 19;
 const row = 11;
