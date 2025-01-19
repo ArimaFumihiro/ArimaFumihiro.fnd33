@@ -24,6 +24,22 @@ function selectNav(e) {
   }
 }
 
+function accordionView() {
+  const button = document.getElementById("accordion-button");
+  const contents = document.getElementsByClassName("wrapper")[0];
+  let number = 0;
+  button.addEventListener("click", () => {
+    number = (number + 1) % 2;
+    if (number === 1) {
+      contents.classList.add("active");
+    } else {
+      contents.classList.remove("active");
+    }
+  })
+}
+
+accordionView();
+
 for (let i = 0; i < navLength; i++) {
   $nav[i].addEventListener("click", selectNav);
 }
@@ -95,21 +111,89 @@ function addLink(e) {
 inputLink.addEventListener("change", addLink);
 
 
-//map配置表示
-const mapButton = document.getElementById("map-button");
-const square = document.getElementsByClassName("square");
+//table挿入
+document.body.onload = addElement;
 
-mapButton.addEventListener("click", (e) => {
-  if (mapButton.checked === false) {
-    for (let i = 0; i < square.length; i++) {
-      square[i].style.backgroundColor = "hsla(235, 100%, 3%, 0)";
-      square[i].style.color = "hsla(235, 100%, 3%, 0)";
+function addNumber() {
+  const td = document.getElementsByClassName("square1");
+  const tdLength = td.length;
+  for (let i = 0; i < tdLength; i++) {
+    const num = i + 1;
+    td[i].innerHTML = num;
+  }  
+}
+
+function addElement() {  
+  const table = document.getElementById("map-table");
+  const turn = 2;
+  const column = 19;
+  const row = 12;
+  
+  for (let i = 0; i < turn; i++) {
+    const newTbody = document.createElement("tbody");
+    newTbody.className = "table-body";
+    newTbody.id = `table-body${i}`;
+    table.appendChild(newTbody);
+    let counter = 1;
+    for (let j = 0; j < row; j++) {
+      const tbody = document.getElementById(`table-body${i}`)
+      const newTr = document.createElement("tr");
+      newTr.id = `table-tr${i}-${j}`;
+      tbody.appendChild(newTr);
+      for (let k = 0; k < column; k++) {
+        const tr = document.getElementById(`table-tr${i}-${j}`)    
+        const newTd = document.createElement("td");
+        newTd.id = `table-td${i}-${counter}`;
+        newTd.className = `square${i}`;
+        tr.appendChild(newTd);
+        counter++;
+      }
     }    
-  } else {
-    for (let i = 0; i < square.length; i++) {
-      square[i].style.backgroundColor = "#56565944";
-      square[i].style.color = "rgba(254, 1, 22, 0.419)";
-    }
   }
-});
+  const tbody0 = document.getElementById("table-body0");
+  tbody0.classList.add("table-body-active");
+  addNumber();
+  mapSelecter();
+} 
 
+
+function mapSelecter() {
+  const select = document.getElementsByClassName("select");  
+  const selectLength = select.length;
+  const talbeTbody = document.getElementsByClassName("table-body");
+  const talbeTbodyLength = talbeTbody.length;
+  
+  for (let i = 0; i < selectLength; i++) {
+    select[i].addEventListener("click", (e) =>  {
+      for (let j = 0; j < selectLength; j++) {
+        select[j].classList.remove("select-active");
+      }
+
+      for (let j = 0; j < talbeTbodyLength; j++) {
+        talbeTbody[j].classList.remove("table-body-active");
+      }
+
+    const selectMap = e.target;
+    const num = selectMap.dataset.num;
+    selectMap.classList.add("select-active");
+    talbeTbody[num].classList.add("table-body-active");   
+    });
+  }
+}
+
+//フルスクリーン
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      toggleFullScreen();
+    }
+  },
+  false,
+);
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else if (document.exitFullscreen) {
+    document.exitFullscreen();
+  }
+}
