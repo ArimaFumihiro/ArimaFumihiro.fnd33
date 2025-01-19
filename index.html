@@ -60,10 +60,12 @@
       <!--　職場４Ｓ＋躾終わり　-->
     
       <!--　要件の始まり　-->
+      <h2 class="box-headline" id="accordion-button">▼維持継続確認状況判定基準</h2>
+      
       <div class="wrapper">
         <div class="wrap-column1-5 wrap-row1-3-1 top">
-          <h2 class="box-headline">維持継続確認状況</h2>
-        </div>
+          <!--<h2 class="box-headline">▼維持継続確認状況判定基準</h2>-->
+        </div>        
         <div class="box heading wrap-column1 wrap-row1-2">
           <h4 class="vertical">凡例</h4>
         </div>        
@@ -320,8 +322,7 @@
         </div>
         <!--　ゴールド終わり　-->  
       </div>
-      <!--　要件の終わり　-->
-    
+      <!--　要件の終わり　-->   
     </div>
     <!--　monitor-left終わり　-->
 
@@ -395,27 +396,21 @@
     <div class="monitor-map">
       <div id="content-map">
         <div id="mapping">
-          <table id="map-table"><tbody id="table-body"></tbody></table>
+          <table id="map-table"></table>
         </div>
       </div>
-      <div id="serect">
-        <div>◀</div>
-        <div>⬛</div>
-        <div>▶</div>
+      <div id="selecter">
+        <h2 class="select-label">MAP座標</h2>
+        <div class="select" id="select1" data-num="1">ON</div>
+        <div class="select select-active off" id="select2" data-num="0">OFF</div>
       </div>
     </div>
     <!--　monitor-map終わり　-->
     <!--　monitor-right始まり　-->
     <div class="monitor-right">
-      <div class="button">
-        <label for="map-button">MAP配置を表示</label>
-        <input id="map-button" type="checkbox" value="MAP配置">
-      </div>
     </div>
     <!--　monitor-right終わり　-->
   </div>
   <!--　contents終わり　-->
-  <footer>©2025</footer>
-  <script type="text/javascript" src="./table.js"></script>
   <script type="text/javascript" src="./script.js"></script>
 </html>
