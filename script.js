@@ -23,27 +23,40 @@ window.onload = function() {
   newP2.style.cssText = `color: #333333; font-weight: bold; font-size: 11px; position: absolute; top: 97%; left: 95%;`;
 
   newImg0.id = 'img0';
-  newImg0.src = './back0.png';
+  newImg0.addEventListener('mouseover', function () {
+    newImg0.src = './back0_3.png';
+  });
+  newImg0.addEventListener('mouseleave', function () {
+    newImg0.src = './back0.png';
+  });
+  newImg0.addEventListener('mousedown', function () {
+    newImg0.src = './back0_2.png';
+  });
+  newImg0.addEventListener('mouseup', function() {
+    newImg0.src = './back0.png';
+  });
+
+  newImg0.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back0.png';
   newImg0.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0.78;';
 
   newImg1.id = 'img1';
-  newImg1.src = './back1.png';
+  newImg1.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back3.png';
   newImg1.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   newImg2.id = 'img2';
-  newImg2.src = './back2.png';
+  newImg2.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back2.png';
   newImg2.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;}';
 
   newImg3.id = 'img3';
-  newImg3.src = './back3.png';
+  newImg3.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back4.png';
   newImg3.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   newImg4.id = 'img4';
-  newImg4.src = './back4.png';
+  newImg4.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back1.png';
   newImg4.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   newImg5.id = 'img5';
-  newImg5.src = './back5.png';
+  newImg5.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back5.png';
   newImg5.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   body.prepend(newP1);
@@ -142,6 +155,7 @@ function txetColor() {
  
 //RGBをランダムで決定する関数
 function changeCode() {
+  const img0 = document.getElementById('img0');
   const img1 = document.getElementById('img1');
   const img2 = document.getElementById('img2');
   const img3 = document.getElementById('img3');
@@ -155,7 +169,7 @@ function changeCode() {
   const CityNumber = (Math.floor(Math.random() * (imgCity.length)));
 
   imgArray[vewNumber] = '0.8';
-  console.log('imgArray', imgArray);
+  img0.src = './back0_4.png';  
 
   img1.style.opacity = imgArray[1];
   img2.style.opacity = imgArray[2];
