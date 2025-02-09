@@ -177,7 +177,7 @@ function changeCode() {
   img4.style.opacity = imgArray[4];
   img5.style.opacity = imgArray[5];
 
-  imgArray[1] === '0.8' ? img2.style.opacity = '0' : img2.style.opacity = imgCity[CityNumber];
+  imgArray[4] === '0.8' ? img2.style.opacity = '0' : img2.style.opacity = imgCity[CityNumber];
 
   
   //0～15までの数値をランダム生成
