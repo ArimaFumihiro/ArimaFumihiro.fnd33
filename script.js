@@ -303,7 +303,7 @@ function addSaturation() {
   if (mostVividColor === 'red') {
     greenRsult = green - changeNum;
     blueRsult = blue - changeNum;
-    if (greenRsult <= 255 && blueRsult <= 255) {
+    if (greenRsult >= 0 && blueRsult >= 0) {
       green = greenRsult;
       blue = blueRsult;
       changeColor();
@@ -316,7 +316,7 @@ function addSaturation() {
   } else if (mostVividColor === 'green') {
     greenRsult = red - changeNum;
     blueRsult = blue - changeNum;
-    if (redRsult <= 255 && blueRsult <= 255) {
+    if (redRsult >=0 && blueRsult >=0) {
       red = redRsult;
       blue = blueRsult;
       changeColor();
@@ -329,7 +329,7 @@ function addSaturation() {
   } else if (mostVividColor === 'blue') {
     greenRsult = green - changeNum;
     redRsult = red - changeNum;
-    if (greenRsult <= 255 && redRsult <= 255) {
+    if (greenRsult >=0 && redRsult >=0) {
       green = greenRsult;
       red = redRsult;
       changeColor();
@@ -346,7 +346,7 @@ function reduceSaturation() {
   if (mostVividColor === 'red') {
     greenRsult = green + changeNum;
     blueRsult = blue + changeNum;
-    if (greenRsult >= 0 && blueRsult >= 0) {
+    if (greenRsult <=255 && blueRsult <=255) {
       green = greenRsult;
       blue = blueRsult;
       changeColor();
@@ -359,7 +359,7 @@ function reduceSaturation() {
   } else if (mostVividColor === 'green') {
     greenRsult = red + changeNum;
     blueRsult = blue + changeNum;
-    if (redRsult >= 0 && blueRsult >= 0) {
+    if (redRsult <=255 && blueRsult <=255) {
       red = redRsult;
       blue = blueRsult;
       changeColor();
@@ -372,7 +372,7 @@ function reduceSaturation() {
   } else if (mostVividColor === 'blue') {
     greenRsult = green + changeNum;
     redRsult = red + changeNum;
-    if (greenRsult >= 0 && redRsult >= 0) {
+    if (greenRsult <=255 && redRsult <=255) {
       green = greenRsult;
       red = redRsult;
       changeColor();
