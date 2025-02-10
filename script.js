@@ -294,6 +294,94 @@ function colorCode() {
   p2.style.color = txetColor();
 }
 
+
+//彩度を上げる関数
+function addSaturation() {
+  let redRsult = 0;
+  let greenRsult = 0;
+  let blueRsult = 0;
+  if (mostVividColor === 'red') {
+    greenRsult = green - changeNum;
+    blueRsult = blue - changeNum;
+    if (greenRsult <= 255 && blueRsult <= 255) {
+      green = greenRsult;
+      blue = blueRsult;
+      changeColor();
+      return;
+    } else {
+      
+      return;
+    }
+    
+  } else if (mostVividColor === 'green') {
+    greenRsult = red - changeNum;
+    blueRsult = blue - changeNum;
+    if (redRsult <= 255 && blueRsult <= 255) {
+      red = redRsult;
+      blue = blueRsult;
+      changeColor();
+      return;  
+    } else {
+      
+      return;
+    }
+    
+  } else if (mostVividColor === 'blue') {
+    greenRsult = green - changeNum;
+    redRsult = red - changeNum;
+    if (greenRsult <= 255 && redRsult <= 255) {
+      green = greenRsult;
+      red = redRsult;
+      changeColor();
+    }
+  }
+  
+  return;
+}
+//彩度を下げる関数
+function reduceSaturation() {
+  let redRsult = 0;
+  let greenRsult = 0;
+  let blueRsult = 0;
+  if (mostVividColor === 'red') {
+    greenRsult = green + changeNum;
+    blueRsult = blue + changeNum;
+    if (greenRsult >= 0 && blueRsult >= 0) {
+      green = greenRsult;
+      blue = blueRsult;
+      changeColor();
+      return;
+    } else {
+      
+      return;
+    }
+    
+  } else if (mostVividColor === 'green') {
+    greenRsult = red + changeNum;
+    blueRsult = blue + changeNum;
+    if (redRsult >= 0 && blueRsult >= 0) {
+      red = redRsult;
+      blue = blueRsult;
+      changeColor();
+      return;  
+    } else {
+      
+      return;
+    }
+    
+  } else if (mostVividColor === 'blue') {
+    greenRsult = green + changeNum;
+    redRsult = red + changeNum;
+    if (greenRsult >= 0 && redRsult >= 0) {
+      green = greenRsult;
+      red = redRsult;
+      changeColor();
+    }
+  }
+  
+  return;
+}
+
 //明度を上げる関数
 function addBrightness() {
   const redRsult = red + changeNum;
@@ -322,93 +410,6 @@ function reduceBrightness() {
   } else {
     return;
   }
-}
-
-//彩度を上げる関数
-function addSaturation() {
-  let redRsult = 0;
-  let greenRsult = 0;
-  let blueRsult = 0;
-  if (mostVividColor === 'red') {
-    greenRsult = green + changeNum;
-    blueRsult = blue + changeNum;
-    if (greenRsult <= 255 && blueRsult <= 255) {
-      green = greenRsult;
-      blue = blueRsult;
-      changeColor();
-      return;
-    } else {
-
-      return;
-    }
-
-  } else if (mostVividColor === 'green') {
-    greenRsult = red + changeNum;
-    blueRsult = blue + changeNum;
-    if (redRsult <= 255 && blueRsult <= 255) {
-      red = redRsult;
-      blue = blueRsult;
-      changeColor();
-      return;  
-    } else {
-
-      return;
-    }
-   
-  } else if (mostVividColor === 'blue') {
-    greenRsult = green + changeNum;
-    redRsult = red + changeNum;
-    if (greenRsult <= 255 && redRsult <= 255) {
-      green = greenRsult;
-      red = redRsult;
-      changeColor();
-    }
-  }
-
-  return;
-}
-//彩度を下げる関数
-function reduceSaturation() {
-  let redRsult = 0;
-  let greenRsult = 0;
-  let blueRsult = 0;
-  if (mostVividColor === 'red') {
-    greenRsult = green - changeNum;
-    blueRsult = blue - changeNum;
-    if (greenRsult >= 0 && blueRsult >= 0) {
-      green = greenRsult;
-      blue = blueRsult;
-      changeColor();
-      return;
-    } else {
-
-      return;
-    }
-
-  } else if (mostVividColor === 'green') {
-    greenRsult = red - changeNum;
-    blueRsult = blue - changeNum;
-    if (redRsult >= 0 && blueRsult >= 0) {
-      red = redRsult;
-      blue = blueRsult;
-      changeColor();
-      return;  
-    } else {
-
-      return;
-    }
-   
-  } else if (mostVividColor === 'blue') {
-    greenRsult = green - changeNum;
-    redRsult = red - changeNum;
-    if (greenRsult >= 0 && redRsult >= 0) {
-      green = greenRsult;
-      red = redRsult;
-      changeColor();
-    }
-  }
-
-  return;
 }
 
 //リセットする関数
