@@ -1,7 +1,10 @@
 'use strict';
 // please do not delete the 'use strict' line above
 const body = document.getElementsByTagName('body')[0];
-document.getElementById('color-button').addEventListener('click', changeCode);
+const btn = document.getElementById('color-button')
+const changeNum = 2;
+btn.addEventListener('click', changeCode);
+
 window.onload = function() {
   const newP1 = document.createElement('p');
   const newP2 = document.createElement('p');
@@ -12,52 +15,53 @@ window.onload = function() {
   const newImg4 = document.createElement('img');
   const newImg5 = document.createElement('img');
 
-  body.style.cssText = `overflow: hidden; align-items: center; display: flex; font-family: monospace; justify-content: center; hieght: 100vh;`;
+  body.style.cssText = `overflow: hidden; align-items: center; display: flex; font-family: monospace; justify-content: center; height: 100%;`;
 
   newP1.id = 'main_color';
   newP1.textContent =  'Try clicking the button!!';
-  newP1.style.cssText = `color: #333333; font-weight: bold; font-size: 50px; position: absolute; top: 20%; left: 10%;`;
+  newP1.style.cssText = `color: #333333; font-weight: bold; font-size: 50px; position: absolute; top: 18%; left: 10%;`;
 
   newP2.id = 'Copyright';
   newP2.textContent =  '©Fumihiro_Arima';
   newP2.style.cssText = `color: #333333; font-weight: bold; font-size: 11px; position: absolute; top: 97%; left: 95%;`;
 
   newImg0.id = 'img0';
+  newImg0.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back0.png';
+
   newImg0.addEventListener('mouseover', function () {
-    newImg0.src = './back0_3.png';
+    newImg0.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back0_3.png';
   });
   newImg0.addEventListener('mouseleave', function () {
-    newImg0.src = './back0.png';
+    newImg0.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back0.png';
   });
   newImg0.addEventListener('mousedown', function () {
-    newImg0.src = './back0_2.png';
+    newImg0.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back0_2.png';
   });
   newImg0.addEventListener('mouseup', function() {
-    newImg0.src = './back0.png';
+    newImg0.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back0.png';
   });
 
-  newImg0.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back0.png';
-  newImg0.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0.78;';
+  newImg0.style.cssText = 'height: 100%; osition: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0.78;';
 
   newImg1.id = 'img1';
   newImg1.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back3.png';
-  newImg1.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
+  newImg1.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   newImg2.id = 'img2';
   newImg2.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back2.png';
-  newImg2.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;}';
+  newImg2.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;}';
 
   newImg3.id = 'img3';
   newImg3.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back4.png';
-  newImg3.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
+  newImg3.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   newImg4.id = 'img4';
   newImg4.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back1.png';
-  newImg4.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
+  newImg4.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   newImg5.id = 'img5';
   newImg5.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back5.png';
-  newImg5.style.cssText = 'position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
+  newImg5.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   body.prepend(newP1);
   body.prepend(newP2);
@@ -69,7 +73,7 @@ window.onload = function() {
   body.prepend(newImg5);
 
   const btn = document.getElementById('color-button')
-  btn.style.zIndex = '100';
+  btn.style.cssText = ' position: absolute; top: 50%; left: 44.5%;';
 }
 
 let changeCount = 0; 
@@ -169,7 +173,7 @@ function changeCode() {
   const CityNumber = (Math.floor(Math.random() * (imgCity.length)));
 
   imgArray[vewNumber] = '0.8';
-  img0.src = './back0_4.png';  
+  img0.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back0_4.png';  
 
   img1.style.opacity = imgArray[1];
   img2.style.opacity = imgArray[2];
@@ -237,7 +241,7 @@ function newDocument (){
   newDiv3.style.cssText = `color: ${txetColor()}; font-size: 11px; position: absolute; top: 27%; left: 95.5%; text-aline:center`;
 
   p1.textContent =  `Main color is ${mainColor}`;
-  p1.style.cssText = `color: ${txetColor()}; font-size: 50px; position: absolute; top: 20%; left: 10%;`;
+  p1.style.cssText = `color: ${txetColor()}; font-size: 50px; position: absolute; top: 18%; left: 10%;`;
 
   newP2.id = 'complementary_color';
   newP2.textContent =  `Complementary color is ${complementaryColor}`;
@@ -292,9 +296,9 @@ function colorCode() {
 
 //明度を上げる関数
 function addBrightness() {
-  const redRsult = red + 10;
-  const greenRsult = green + 10;
-  const blueRsult = blue + 10;
+  const redRsult = red + changeNum;
+  const greenRsult = green + changeNum;
+  const blueRsult = blue + changeNum;
   if (redRsult <= 255 && greenRsult <= 255 && blueRsult <= 255) {
     red = redRsult;
     green = greenRsult;
@@ -307,9 +311,9 @@ function addBrightness() {
 
 //明度を下げる関数
 function reduceBrightness() {
-  const redRsult = red - 10;
-  const greenRsult = green - 10;
-  const blueRsult = blue - 10;
+  const redRsult = red - changeNum;
+  const greenRsult = green - changeNum;
+  const blueRsult = blue - changeNum;
   if (redRsult > 0 && greenRsult > 0 && blueRsult > 0) {
     red = redRsult;
     green = greenRsult;
@@ -326,8 +330,8 @@ function addSaturation() {
   let greenRsult = 0;
   let blueRsult = 0;
   if (mostVividColor === 'red') {
-    greenRsult = green + 10;
-    blueRsult = blue + 10;
+    greenRsult = green + changeNum;
+    blueRsult = blue + changeNum;
     if (greenRsult <= 255 && blueRsult <= 255) {
       green = greenRsult;
       blue = blueRsult;
@@ -339,8 +343,8 @@ function addSaturation() {
     }
 
   } else if (mostVividColor === 'green') {
-    greenRsult = red + 10;
-    blueRsult = blue + 10;
+    greenRsult = red + changeNum;
+    blueRsult = blue + changeNum;
     if (redRsult <= 255 && blueRsult <= 255) {
       red = redRsult;
       blue = blueRsult;
@@ -352,8 +356,8 @@ function addSaturation() {
     }
    
   } else if (mostVividColor === 'blue') {
-    greenRsult = green + 10;
-    redRsult = red + 10;
+    greenRsult = green + changeNum;
+    redRsult = red + changeNum;
     if (greenRsult <= 255 && redRsult <= 255) {
       green = greenRsult;
       red = redRsult;
@@ -369,8 +373,8 @@ function reduceSaturation() {
   let greenRsult = 0;
   let blueRsult = 0;
   if (mostVividColor === 'red') {
-    greenRsult = green - 10;
-    blueRsult = blue - 10;
+    greenRsult = green - changeNum;
+    blueRsult = blue - changeNum;
     if (greenRsult >= 0 && blueRsult >= 0) {
       green = greenRsult;
       blue = blueRsult;
@@ -382,8 +386,8 @@ function reduceSaturation() {
     }
 
   } else if (mostVividColor === 'green') {
-    greenRsult = red - 10;
-    blueRsult = blue - 10;
+    greenRsult = red - changeNum;
+    blueRsult = blue - changeNum;
     if (redRsult >= 0 && blueRsult >= 0) {
       red = redRsult;
       blue = blueRsult;
@@ -395,8 +399,8 @@ function reduceSaturation() {
     }
    
   } else if (mostVividColor === 'blue') {
-    greenRsult = green - 10;
-    redRsult = red - 10;
+    greenRsult = green - changeNum;
+    redRsult = red - changeNum;
     if (greenRsult >= 0 && redRsult >= 0) {
       green = greenRsult;
       red = redRsult;
