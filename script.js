@@ -7,7 +7,7 @@ btn.addEventListener('click', changeCode);
 
 window.onload = function() {
   const newP1 = document.createElement('p');
-  const newP2 = document.createElement('p');
+  const newPCopyright = document.createElement('p');
   const newImg0 = document.createElement('img');
   const newImg1 = document.createElement('img');
   const newImg2 = document.createElement('img');
@@ -21,9 +21,9 @@ window.onload = function() {
   newP1.textContent =  'Try clicking the button!!';
   newP1.style.cssText = `color: #333333; font-weight: bold; font-size: 50px; position: absolute; top: 18%; left: 10%;`;
 
-  newP2.id = 'Copyright';
-  newP2.textContent =  '©Fumihiro_Arima';
-  newP2.style.cssText = `color: #333333; font-weight: bold; font-size: 11px; position: absolute; top: 97%; left: 95%;`;
+  newPCopyright.id = 'Copyright';
+  newPCopyright.textContent =  '©Fumihiro_Arima';
+  newPCopyright.style.cssText = `color: #333333; font-weight: bold; font-size: 11px; position: absolute; top: 97%; left: 95%;`;
 
   newImg0.id = 'img0';
   newImg0.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back0.png';
@@ -44,7 +44,7 @@ window.onload = function() {
   newImg0.style.cssText = 'height: 100%; osition: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0.78;';
 
   newImg1.id = 'img1';
-  newImg1.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back3.png';
+  newImg1.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back1.png';
   newImg1.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   newImg2.id = 'img2';
@@ -52,11 +52,11 @@ window.onload = function() {
   newImg2.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;}';
 
   newImg3.id = 'img3';
-  newImg3.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back4.png';
+  newImg3.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back3.png';
   newImg3.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   newImg4.id = 'img4';
-  newImg4.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back1.png';
+  newImg4.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back4.png';
   newImg4.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   newImg5.id = 'img5';
@@ -64,7 +64,7 @@ window.onload = function() {
   newImg5.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
 
   body.prepend(newP1);
-  body.prepend(newP2);
+  body.prepend(newPCopyright);
   body.prepend(newImg0);
   body.prepend(newImg1);
   body.prepend(newImg2);
@@ -144,7 +144,7 @@ function changeColor() {
   complementaryColor = `#${changeHexadecimal(red2)}${changeHexadecimal(green2)}${changeHexadecimal(blue2)}`;
   
   //背景色を変更
-  body.style.cssText = `background:linear-gradient(to bottom right,${mainColor} 65%,${complementaryColor} 35%); overflow: hidden; align-items: center; display: flex; font-family: monospace; justify-content: center; hieght: 100vh;`;
+  body.style.cssText = `overflow: hidden; background:linear-gradient(to bottom right,${mainColor} 65%,${complementaryColor} 35%); align-items: center; display: flex; font-family: monospace; justify-content: center; hieght: 100vh;`;
 
   //新しい要素を作るか判定
   changeCount === 0? newDocument() : colorCode();
@@ -153,7 +153,7 @@ function changeColor() {
 //背景色に応じて文字色を変更
 function txetColor() {
   sumNumber = red + green + blue;
-  return sumNumber > 550? '#333333' : '#FFFFFF'
+  return sumNumber > 550 ? '#333333' : '#FFFFFF';
 }
 
  
@@ -181,7 +181,7 @@ function changeCode() {
   img4.style.opacity = imgArray[4];
   img5.style.opacity = imgArray[5];
 
-  imgArray[4] === '0.8' ? img2.style.opacity = '0' : img2.style.opacity = imgCity[CityNumber];
+  imgArray[1] === '0.8' ? img2.style.opacity = '0' : img2.style.opacity = imgCity[CityNumber];
 
   
   //0～15までの数値をランダム生成
@@ -241,11 +241,11 @@ function newDocument (){
   newDiv3.style.cssText = `color: ${txetColor()}; font-size: 11px; position: absolute; top: 27%; left: 95.5%; text-aline:center`;
 
   p1.textContent =  `Main color is ${mainColor}`;
-  p1.style.cssText = `color: ${txetColor()}; font-size: 50px; position: absolute; top: 18%; left: 10%;`;
+  p1.style.cssText = `color: ${txetColor()}; font-weight: bold; font-size: 50px; position: absolute; top: 18%; left: 10%;`;
 
   newP2.id = 'complementary_color';
   newP2.textContent =  `Complementary color is ${complementaryColor}`;
-  newP2.style.cssText = `color: ${txetColor()}; font-size: 25px; position: absolute; top: 80%; left: 70%;`;
+  newP2.style.cssText = `color: ${txetColor()}; font-weight: bold; font-size: 25px; position: absolute; top: 80%; left: 70%;`;
 
   newbutton1.id = 'Saturation-up-button';
   newbutton1.textContent = 'UP';
