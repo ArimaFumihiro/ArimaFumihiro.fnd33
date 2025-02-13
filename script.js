@@ -2,18 +2,40 @@
 // please do not delete the 'use strict' line above
 const body = document.getElementsByTagName('body')[0];
 const btn = document.getElementById('color-button')
-const changeNum = 2;
 btn.addEventListener('click', changeCode);
 
+//新しい要素作成
+function newElement(element) {
+  return document.createElement(element);
+}
+
+//imgにスタイル追加
+function imgStyle(array) {
+  for (let i = 1; i < array.length; i++) {
+    array[i].style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
+  }
+}
+
+//bodyに要素を追加
+function bodyPrepend(...array) {
+  for (let i = 0; i < array.length; i++) {
+    for (const element of array[i]) {
+      body.prepend(element);
+    }
+  }
+}
+
 window.onload = function() {
-  const newP1 = document.createElement('p');
-  const newPCopyright = document.createElement('p');
-  const newImg0 = document.createElement('img');
-  const newImg1 = document.createElement('img');
-  const newImg2 = document.createElement('img');
-  const newImg3 = document.createElement('img');
-  const newImg4 = document.createElement('img');
-  const newImg5 = document.createElement('img');
+  const newP1 = newElement('p');
+  const newP2 = newElement('p');
+  const newImg0 = newElement('img');
+  const newImg1 = newElement('img');
+  const newImg2 = newElement('img');
+  const newImg3 = newElement('img');
+  const newImg4 = newElement('img');
+  const newImg5 = newElement('img');
+  const arrayP = [newP1, newP2];
+  const arrayImg = [newImg0, newImg1, newImg2, newImg3, newImg4, newImg5];
 
   body.style.cssText = `overflow: hidden; align-items: center; display: flex; font-family: monospace; justify-content: center; height: 100%;`;
 
@@ -21,9 +43,9 @@ window.onload = function() {
   newP1.textContent =  'Try clicking the button!!';
   newP1.style.cssText = `color: #333333; font-weight: bold; font-size: 50px; position: absolute; top: 18%; left: 10%;`;
 
-  newPCopyright.id = 'Copyright';
-  newPCopyright.textContent =  '©Fumihiro_Arima';
-  newPCopyright.style.cssText = `color: #333333; font-weight: bold; font-size: 11px; position: absolute; top: 97%; left: 95%;`;
+  newP2.id = 'Copyright';
+  newP2.textContent =  '©Fumihiro_Arima';
+  newP2.style.cssText = `color: #333333; font-weight: bold; font-size: 11px; position: absolute; top: 97%; left: 95%;`;
 
   newImg0.id = 'img0';
   newImg0.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back0.png';
@@ -41,36 +63,25 @@ window.onload = function() {
     newImg0.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back0.png';
   });
 
-  newImg0.style.cssText = 'height: 100%; osition: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0.78;';
+  newImg0.style.cssText = 'height: 100%; osition: absolute; top: 0%; left: 0%; opacity: 0.78;';
 
   newImg1.id = 'img1';
-  newImg1.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back1.png';
-  newImg1.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
-
+  newImg1.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back3.png';
+  
   newImg2.id = 'img2';
   newImg2.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back2.png';
-  newImg2.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;}';
-
+  
   newImg3.id = 'img3';
-  newImg3.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back3.png';
-  newImg3.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
-
+  newImg3.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back4.png';
+  
   newImg4.id = 'img4';
-  newImg4.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back4.png';
-  newImg4.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
-
+  newImg4.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back1.png';
+  
   newImg5.id = 'img5';
   newImg5.src = 'https://arimafumihiro.github.io/fumihiro_art_museum/back5.png';
-  newImg5.style.cssText = 'height: 100%; position: absolute; top: 0%; left: 0%; transition: opacity 2s; opacity: 0;';
-
-  body.prepend(newP1);
-  body.prepend(newPCopyright);
-  body.prepend(newImg0);
-  body.prepend(newImg1);
-  body.prepend(newImg2);
-  body.prepend(newImg3);
-  body.prepend(newImg4);
-  body.prepend(newImg5);
+ 
+  imgStyle(arrayImg);
+  bodyPrepend(arrayP,arrayImg);
 
   const btn = document.getElementById('color-button')
   btn.style.cssText = ' position: absolute; top: 50%; left: 44.5%;';
@@ -91,7 +102,6 @@ let blue2 ='';
 let resetRed = '';
 let resetGreen = '';
 let resetBlue = '';
-
 
 let mainColor = '#000000'
 let resetColor = '#000000'
@@ -144,7 +154,7 @@ function changeColor() {
   complementaryColor = `#${changeHexadecimal(red2)}${changeHexadecimal(green2)}${changeHexadecimal(blue2)}`;
   
   //背景色を変更
-  body.style.cssText = `overflow: hidden; background:linear-gradient(to bottom right,${mainColor} 65%,${complementaryColor} 35%); align-items: center; display: flex; font-family: monospace; justify-content: center; hieght: 100vh;`;
+  body.style.cssText = `background:linear-gradient(to bottom right,${mainColor} 65%,${complementaryColor} 35%); overflow: hidden; align-items: center; display: flex; font-family: monospace; justify-content: center; hieght: 100%;`;
 
   //新しい要素を作るか判定
   changeCount === 0? newDocument() : colorCode();
@@ -153,7 +163,7 @@ function changeColor() {
 //背景色に応じて文字色を変更
 function txetColor() {
   sumNumber = red + green + blue;
-  return sumNumber > 550 ? '#333333' : '#FFFFFF';
+  return sumNumber > 550? '#333333' : '#FFFFFF'
 }
 
  
@@ -181,7 +191,7 @@ function changeCode() {
   img4.style.opacity = imgArray[4];
   img5.style.opacity = imgArray[5];
 
-  imgArray[1] === '0.8' ? img2.style.opacity = '0' : img2.style.opacity = imgCity[CityNumber];
+  imgArray[4] === '0.8' ? img2.style.opacity = '0' : img2.style.opacity = imgCity[CityNumber];
 
   
   //0～15までの数値をランダム生成
@@ -241,11 +251,11 @@ function newDocument (){
   newDiv3.style.cssText = `color: ${txetColor()}; font-size: 11px; position: absolute; top: 27%; left: 95.5%; text-aline:center`;
 
   p1.textContent =  `Main color is ${mainColor}`;
-  p1.style.cssText = `color: ${txetColor()}; font-weight: bold; font-size: 50px; position: absolute; top: 18%; left: 10%;`;
+  p1.style.cssText = `color: ${txetColor()}; font-size: 50px; position: absolute; top: 18%; left: 10%;`;
 
   newP2.id = 'complementary_color';
   newP2.textContent =  `Complementary color is ${complementaryColor}`;
-  newP2.style.cssText = `color: ${txetColor()}; font-weight: bold; font-size: 25px; position: absolute; top: 80%; left: 70%;`;
+  newP2.style.cssText = `color: ${txetColor()}; font-size: 25px; position: absolute; top: 80%; left: 70%;`;
 
   newbutton1.id = 'Saturation-up-button';
   newbutton1.textContent = 'UP';
@@ -294,99 +304,11 @@ function colorCode() {
   p2.style.color = txetColor();
 }
 
-
-//彩度を上げる関数
-function addSaturation() {
-  let redRsult = 0;
-  let greenRsult = 0;
-  let blueRsult = 0;
-  if (mostVividColor === 'red') {
-    greenRsult = green - changeNum;
-    blueRsult = blue - changeNum;
-    if (greenRsult >= 0 && blueRsult >= 0) {
-      green = greenRsult;
-      blue = blueRsult;
-      changeColor();
-      return;
-    } else {
-      
-      return;
-    }
-    
-  } else if (mostVividColor === 'green') {
-    greenRsult = red - changeNum;
-    blueRsult = blue - changeNum;
-    if (redRsult >=0 && blueRsult >=0) {
-      red = redRsult;
-      blue = blueRsult;
-      changeColor();
-      return;  
-    } else {
-      
-      return;
-    }
-    
-  } else if (mostVividColor === 'blue') {
-    greenRsult = green - changeNum;
-    redRsult = red - changeNum;
-    if (greenRsult >=0 && redRsult >=0) {
-      green = greenRsult;
-      red = redRsult;
-      changeColor();
-    }
-  }
-  
-  return;
-}
-//彩度を下げる関数
-function reduceSaturation() {
-  let redRsult = 0;
-  let greenRsult = 0;
-  let blueRsult = 0;
-  if (mostVividColor === 'red') {
-    greenRsult = green + changeNum;
-    blueRsult = blue + changeNum;
-    if (greenRsult <=255 && blueRsult <=255) {
-      green = greenRsult;
-      blue = blueRsult;
-      changeColor();
-      return;
-    } else {
-      
-      return;
-    }
-    
-  } else if (mostVividColor === 'green') {
-    greenRsult = red + changeNum;
-    blueRsult = blue + changeNum;
-    if (redRsult <=255 && blueRsult <=255) {
-      red = redRsult;
-      blue = blueRsult;
-      changeColor();
-      return;  
-    } else {
-      
-      return;
-    }
-    
-  } else if (mostVividColor === 'blue') {
-    greenRsult = green + changeNum;
-    redRsult = red + changeNum;
-    if (greenRsult <=255 && redRsult <=255) {
-      green = greenRsult;
-      red = redRsult;
-      changeColor();
-    }
-  }
-  
-  return;
-}
-
 //明度を上げる関数
 function addBrightness() {
-  const redRsult = red + changeNum;
-  const greenRsult = green + changeNum;
-  const blueRsult = blue + changeNum;
+  const redRsult = red + 8;
+  const greenRsult = green + 8;
+  const blueRsult = blue + 8;
   if (redRsult <= 255 && greenRsult <= 255 && blueRsult <= 255) {
     red = redRsult;
     green = greenRsult;
@@ -399,9 +321,9 @@ function addBrightness() {
 
 //明度を下げる関数
 function reduceBrightness() {
-  const redRsult = red - changeNum;
-  const greenRsult = green - changeNum;
-  const blueRsult = blue - changeNum;
+  const redRsult = red - 8;
+  const greenRsult = green - 8;
+  const blueRsult = blue - 8;
   if (redRsult > 0 && greenRsult > 0 && blueRsult > 0) {
     red = redRsult;
     green = greenRsult;
@@ -410,6 +332,93 @@ function reduceBrightness() {
   } else {
     return;
   }
+}
+
+//彩度を上げる関数
+function addSaturation() {
+  let redRsult = 0;
+  let greenRsult = 0;
+  let blueRsult = 0;
+  if (mostVividColor === 'red') {
+    greenRsult = green + 8;
+    blueRsult = blue + 8;
+    if (greenRsult <= 255 && blueRsult <= 255) {
+      green = greenRsult;
+      blue = blueRsult;
+      changeColor();
+      return;
+    } else {
+
+      return;
+    }
+
+  } else if (mostVividColor === 'green') {
+    greenRsult = red + 8;
+    blueRsult = blue + 8;
+    if (redRsult <= 255 && blueRsult <= 255) {
+      red = redRsult;
+      blue = blueRsult;
+      changeColor();
+      return;  
+    } else {
+
+      return;
+    }
+   
+  } else if (mostVividColor === 'blue') {
+    greenRsult = green + 8;
+    redRsult = red + 8;
+    if (greenRsult <= 255 && redRsult <= 255) {
+      green = greenRsult;
+      red = redRsult;
+      changeColor();
+    }
+  }
+
+  return;
+}
+//彩度を下げる関数
+function reduceSaturation() {
+  let redRsult = 0;
+  let greenRsult = 0;
+  let blueRsult = 0;
+  if (mostVividColor === 'red') {
+    greenRsult = green - 8;
+    blueRsult = blue - 8;
+    if (greenRsult >= 0 && blueRsult >= 0) {
+      green = greenRsult;
+      blue = blueRsult;
+      changeColor();
+      return;
+    } else {
+
+      return;
+    }
+
+  } else if (mostVividColor === 'green') {
+    greenRsult = red - 8;
+    blueRsult = blue - 8;
+    if (redRsult >= 0 && blueRsult >= 0) {
+      red = redRsult;
+      blue = blueRsult;
+      changeColor();
+      return;  
+    } else {
+
+      return;
+    }
+   
+  } else if (mostVividColor === 'blue') {
+    greenRsult = green - 8;
+    redRsult = red - 8;
+    if (greenRsult >= 0 && redRsult >= 0) {
+      green = greenRsult;
+      red = redRsult;
+      changeColor();
+    }
+  }
+
+  return;
 }
 
 //リセットする関数
